@@ -10,7 +10,8 @@ int main(void){
         pointsEarned[x] = get_int ("Points earned on assignment:\n"); // asks for the amount of points earned and puts it into an array
         pointsPossible[x] = get_int ("Points possible earned on assignment:\n"); // asks for the amount of points possible and puts it into an array
     TOTALPOINTSEARNED += pointsEarned[x];
-    TOTALPOINTSPOSSIBLE += pointsPossible[x];}
+    TOTALPOINTSPOSSIBLE += pointsPossible[x];
+    }
     float divide= ((float)TOTALPOINTSEARNED)/(float)(TOTALPOINTSPOSSIBLE)*100; // divides the points earned from points possible
     printf ("Final grade: %f\n", divide); // prints the average grade or answer from division problem
     }
