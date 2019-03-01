@@ -20,11 +20,11 @@ void loop(){
 
     for(int i = 0;NUM_LEDS>i;i++){
 
-        leds[NUM_LEDS -(5-i)]=CRGB::Red;
+        leds[NUM_LEDS-(i)]=CRGB::Red;
 
-        leds[NUM_LEDS-(5-i) ]=CRGB::Blue;
+        leds[NUM_LEDS-(i)]=CRGB::Blue;
 
-        leds[NUM_LEDS- (5-i)]=CRGB::Green;
+        leds[NUM_LEDS-(i)]=CRGB::Green;
 
         FastLED.show();
 
