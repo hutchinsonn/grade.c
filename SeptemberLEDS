@@ -1,8 +1,16 @@
 #include <FastLED.h>
 
+
+
 #define NUM_LEDS 135
 
+
+
 #define DATA_PIN 11
+
+
+
+
 
 
 
@@ -10,54 +18,116 @@ CRGB leds[NUM_LEDS];
 
 
 
+
+
+
+
 void setup(){
+
+
 
     FastLED.addLeds<WS2812B,DATA_PIN>(leds,NUM_LEDS);
 
+
+
 }
+
+
 
 void loop(){
 
+
+
     for(int i = 0;i<NUM_LEDS;i++){
+
+
 
         leds[NUM_LEDS-(i)]=CRGB::Red;
 
-        leds[NUM_LEDS-(i)]=CRGB::Blue;
 
-        leds[NUM_LEDS-(i)]=CRGB::Green;
+
+        leds[NUM_LEDS-(6)]=CRGB::Blue;
+
+
+
+        leds[NUM_LEDS-(5)]=CRGB::Green;
+
+
 
         FastLED.show();
 
-        delay(50);
 
-        leds[NUM_LEDS-(5-i)]=CRGB::Black;}
+
+        delay(10);
+
+
+
+        leds[NUM_LEDS-(2)]=CRGB::Black;}
+
+
 
     for (int n=134;n<NUM_LEDS;n+=134){
 
+
+
         for (int i=0;i<=n;i++){
+
+
 
             leds[i]=CRGB::Green;
 
+
+
             leds[i]=CRGB::Blue;
+
+
 
             leds[i]=CRGB::Red;
 
+
+
             FastLED.show();
+
+
 
             delay(10);
 
+
+
             leds[i]=CRGB::Yellow;}
+
+
 
         for (int i=0;i<n;i++){
 
+
+
             leds[n-i]=CRGB::White;
 
+
+
             FastLED.show();
+
             delay(20);
 
-            leds[n-i]=CRGB::Black;}     
 
-    }
+
+            leds[n-i]=CRGB::Black;} 
+
+             for (int i=0; i<n;i++){
+              leds [n-i]=CRGB:: Orange;
+
+             FastLED.show();
+             delay(10);
+             }
+        
+
+
+
+    }}
+
     
 
-}
+
+
+    
